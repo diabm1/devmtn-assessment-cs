@@ -32,8 +32,8 @@ const mediumArray = getSizedArray(1000);
 const largeArray = getSizedArray(10000);
 const extraLargeArray = getSizedArray(100000);
 
-// How long does it take to double every number in a given
-// array?
+// How long does it take to double every number in a given array?
+// The time it takes to double every number in a given array depends on the size of the array, the available computational resources, and the specific implementation of the function.
 
 // Try it with first function
 perf.start(); // Starts timer
@@ -55,7 +55,7 @@ const arraysToTest = [
   { name: "Small Array", array: smallArray },
   { name: "Medium Array", array: mediumArray },
   { name: "Large Array", array: largeArray },
-  { name: "Extra Array", array: extraLargeArray },
+  { name: "Extra Large Array", array: extraLargeArray },
 ];
 
 // loop over each array and measure the time for both functions
@@ -65,12 +65,12 @@ for (let { name, array } of arraysToTest) {
   perf.start();
   doublerAppend(array);
   let resultsAppend = perf.stop();
-  console.log("append", resultsAppend.preciseWords);
+  console.log("append", resultsAppend.time.toFixed(6), "ms"); // Output time in milliseconds
 
   perf.start();
   doublerInsert(array);
   let resultsInsert = perf.stop();
-  console.log("insert", resultsInsert.preciseWords);
+  console.log("insert", resultsInsert.time.toFixed(6), "ms"); // Output time in milliseconds
 
   console.log("\n"); // add an extra newline for readability
 }

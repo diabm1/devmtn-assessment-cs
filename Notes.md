@@ -1,1 +1,1 @@
-The doublerAppend function, which uses the push() method, is consistently faster than the doublerInsert function for all sizes of arrays we tested. The time it takes for doublerAppend to run increases linearly as the array gets bigger. The doublerInsert function uses the unshift() method and it gets slow pretty quickly as the array gets longer. So, because of this, using push() (like in doublerAppend) is way faster and efficient for big arrays of numbers compared to unshift().
+https://docs.google.com/document/d/1MjT90GNOdH3YNduCrhNlPIJntFjdI6SPdo4hzRWU7C0/edit?usp=sharing
